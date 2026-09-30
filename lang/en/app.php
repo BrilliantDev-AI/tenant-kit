@@ -1,0 +1,257 @@
+<?php
+
+return [
+
+    'nav' => [
+        'dashboard' => 'Dashboard',
+        'log_in' => 'Log in',
+        'create_workspace' => 'Create workspace',
+        'team' => 'Team',
+        'billing' => 'Billing',
+        'kyc' => 'KYC',
+    ],
+
+    'landing' => [
+        'title' => 'Multi-tenant SaaS Starter',
+        'meta_description' => 'Laravel multi-tenant starter with isolated databases, Breeze, Filament, teams, and Stripe billing.',
+        'hero_title' => 'Multi-tenant SaaS starter for',
+        'hero_highlight' => 'Laravel',
+        'hero_subtitle' => 'Isolated DB per workspace, subdomain routing, teams, Stripe billing, Filament admin.',
+        'live_demo' => 'Live demo',
+        'architecture' => 'Architecture',
+        'central' => 'Central',
+        'central_desc' => 'Admin, billing, workspace signup',
+        'tenant' => 'Tenant',
+        'tenant_desc' => 'Auth, teams, isolated database',
+        'included' => 'Included',
+        'features' => [
+            'multi_tenancy' => ['title' => 'Multi-tenancy', 'desc' => 'Isolated DB, subdomain & custom domains'],
+            'authentication' => ['title' => 'Authentication', 'desc' => 'Breeze on central & tenant'],
+            'teams' => ['title' => 'Teams & roles', 'desc' => 'Owner, admin, member + invites'],
+            'billing' => ['title' => 'Stripe billing', 'desc' => 'Cashier per workspace'],
+            'filament' => ['title' => 'Filament admin', 'desc' => 'Manage workspaces at /admin'],
+            'cli' => ['title' => 'CLI', 'desc' => 'tenant:provision command'],
+        ],
+        'try_demo' => 'Try the demo',
+        'admin_panel' => 'Admin panel',
+        'demo_login' => 'Demo login',
+    ],
+
+    'dashboard' => [
+        'title' => 'Dashboard',
+        'admin_panel' => 'Admin panel',
+        'create_workspace' => 'Create workspace',
+        'demo_workspace' => 'Demo workspace',
+    ],
+
+    'tenant' => [
+        'sign_in' => 'Sign in',
+        'register' => 'Register',
+        'members' => 'Members',
+        'url' => 'URL',
+        'suspended' => 'This workspace has been suspended. Contact support for help.',
+    ],
+
+    'kyc' => [
+        'onboarding_title' => 'Identity verification',
+        'onboarding_intro' => 'Upload a government ID document. Verification uses this workspace’s KYC settings (country, level, extraction driver).',
+        'document' => 'ID document',
+        'country' => 'Country',
+        'level' => 'Level',
+        'status' => 'Status',
+        'confidence' => 'Confidence',
+        'warnings' => 'Warnings',
+        'queue_label' => 'Process in the background (queue)',
+        'submit' => 'Verify document',
+        'queued' => 'Document queued for verification. Check the review panel shortly.',
+        'result_title' => 'Verification result',
+        'verify_another' => 'Verify another document',
+        'open_review' => 'Open review panel',
+        'back_dashboard' => 'Back to dashboard',
+        'verification' => 'Verification',
+        'verifications' => 'Verifications',
+    ],
+
+    'workspace' => [
+        'create_title' => 'Create your workspace',
+        'create_subtitle' => 'Start a new tenant on :domain',
+        'name' => 'Workspace name',
+        'url' => 'Workspace URL',
+        'create_button' => 'Create workspace',
+        'created' => 'Your workspace has been created successfully.',
+    ],
+
+    'team' => [
+        'title' => 'Team members',
+        'members' => 'Members',
+        'pending_invitations' => 'Pending invitations',
+        'invite_title' => 'Invite a teammate',
+        'email' => 'Email',
+        'role' => 'Role',
+        'role_member' => 'Member',
+        'role_admin' => 'Admin',
+        'send_invitation' => 'Send invitation',
+        'member_exists' => 'This user is already a workspace member.',
+        'invitation_sent' => 'Invitation sent to :email',
+        'invitation_subject' => 'Workspace invitation',
+        'invitation_body' => 'You have been invited to join :workspace. Accept here: :url',
+    ],
+
+    'invitations' => [
+        'expired' => 'This invitation has expired.',
+        'register_to_accept' => 'Create an account to accept your invitation.',
+        'wrong_email' => 'Sign in with :email to accept this invitation.',
+        'accepted' => 'Welcome to the team!',
+    ],
+
+    'billing' => [
+        'title' => 'Billing — :name',
+        'checkout_success' => 'Subscription updated successfully.',
+        'stripe_not_configured' => 'Stripe is not configured. Add keys to .env (see README).',
+        'workspace' => 'Workspace',
+        'active_subscription' => 'Active subscription: :price',
+        'manage_payment' => 'Manage payment method & invoices →',
+        'no_subscription' => 'No active subscription.',
+        'per_month' => '/mo',
+        'subscribe' => 'Subscribe',
+        'back_to_workspace' => '← Back to workspace',
+        'stripe_not_configured_error' => 'Stripe is not configured.',
+        'usage_title' => 'Usage this period',
+        'usage_period' => ':start → :end',
+    ],
+
+    'plans' => [
+        'starter' => [
+            'name' => 'Starter',
+            'description' => 'For small teams getting started.',
+        ],
+        'pro' => [
+            'name' => 'Pro',
+            'description' => 'For growing teams that need more power.',
+        ],
+    ],
+
+    'oauth' => [
+        'or_continue_with' => 'Or continue with',
+        'google' => 'Google',
+        'github' => 'GitHub',
+    ],
+
+    'filament' => [
+        'analytics_total_workspaces' => 'Total workspaces',
+        'analytics_new_this_month' => ':count new this month',
+        'analytics_active_subscriptions' => 'Active subscriptions',
+        'analytics_stripe_subscribers' => 'Stripe subscribers',
+        'analytics_platform_users' => 'Platform users',
+        'analytics_central_users' => 'Central app accounts',
+        'analytics_growth_chart' => 'Workspace growth (6 months)',
+        'workspaces' => 'Workspaces',
+        'workspace' => 'workspace',
+        'workspaces_plural' => 'workspaces',
+        'subdomain' => 'Subdomain',
+        'url' => 'URL',
+        'open' => 'Open',
+        'domains' => 'Domains',
+        'domain' => 'Domain',
+        'domain_helper' => 'Use the subdomain slug (e.g. demo) or a full custom domain (e.g. app.acme.com).',
+        'type' => 'Type',
+        'subdomain_type' => 'Subdomain',
+        'custom_domain_type' => 'Custom domain',
+        'stats_workspaces' => 'Workspaces',
+        'stats_workspaces_desc' => 'Total tenant workspaces',
+        'stats_admins' => 'Platform admins',
+        'stats_admins_desc' => 'Central app users',
+        'stats_domain' => 'Central domain',
+        'stats_domain_desc' => 'Subdomains are created under this host',
+        'status' => 'Status',
+        'suspend' => 'Suspend',
+        'unsuspend' => 'Unsuspend',
+        'suspended' => 'Suspended',
+        'active' => 'Active',
+    ],
+
+    'api_operator' => [
+        'title' => 'Tenant Assistant',
+        'subtitle' => 'Your guided workspace agent',
+        'greeting' => "Hello! I'm your Tenant Kit assistant.\nPick a topic below and I'll guide you step by step — or type freely anytime.",
+        'placeholder' => 'Type your answer…',
+        'send' => 'Send',
+        'thinking' => 'Thinking…',
+        'confirm_hint' => 'Sensitive actions need typing yes to confirm.',
+        'unavailable' => 'API Operator service is not running. Start api-operator serve.',
+        'disabled' => 'API Operator chat is disabled.',
+        'ui' => [
+            'chip_back' => '← Back',
+            'chip_main_menu' => '← Main menu',
+            'chip_cancel' => 'Cancel',
+            'chip_confirm' => 'Confirm',
+            'chip_yes' => 'Yes, proceed',
+            'chip_no' => 'No, cancel',
+            'flow_cancelled' => 'No problem. What else can I help you with?',
+            'confirm_placeholder' => 'Type yes to confirm or no to cancel',
+            'confirm_hint' => 'Please tap Yes or No below, or type yes / no.',
+            'help' => "I can help you with:\n\n• Workspaces — list, create, or view details\n• Billing — usage and subscription for a workspace\n• Team — invite a teammate\n\nChoose a topic below to get started. I'll ask for details one step at a time.",
+            'menus' => [
+                'main' => [
+                    'prompt' => 'What would you like to do?',
+                    'options' => [
+                        ['id' => 'workspaces', 'label' => 'Workspaces', 'menu' => 'workspaces'],
+                        ['id' => 'billing', 'label' => 'Billing & usage', 'menu' => 'billing'],
+                        ['id' => 'team', 'label' => 'Team & invites', 'menu' => 'team'],
+                        ['id' => 'help', 'label' => 'How can you help?', 'help' => true],
+                    ],
+                ],
+                'workspaces' => [
+                    'prompt' => 'Workspaces — what do you need?',
+                    'options' => [
+                        ['id' => 'ws_list', 'label' => 'List my workspaces', 'command' => 'list workspaces'],
+                        ['id' => 'ws_create', 'label' => 'Create a new workspace', 'flow' => 'create_workspace'],
+                        ['id' => 'back', 'label' => '← Main menu', 'menu' => 'main'],
+                    ],
+                ],
+                'billing' => [
+                    'prompt' => 'Billing — pick a report:',
+                    'options' => [
+                        ['id' => 'bill_usage', 'label' => 'View usage', 'flow' => 'usage'],
+                        ['id' => 'bill_sub', 'label' => 'View subscription', 'flow' => 'subscription'],
+                        ['id' => 'back', 'label' => '← Main menu', 'menu' => 'main'],
+                    ],
+                ],
+                'team' => [
+                    'prompt' => 'Team — what would you like?',
+                    'options' => [
+                        ['id' => 'team_invite', 'label' => 'Invite a teammate', 'flow' => 'invite_member'],
+                        ['id' => 'back', 'label' => '← Main menu', 'menu' => 'main'],
+                    ],
+                ],
+            ],
+            'flows' => [
+                'create_workspace' => [
+                    'name_prompt' => 'Great! What should we call the workspace? (e.g. Acme Corp)',
+                    'subdomain_prompt' => 'Pick a subdomain — this becomes part of the URL (e.g. acme)',
+                    'confirm_prompt' => 'Ready to create workspace ":name" at :subdomain.:domain?',
+                    'invalid_subdomain' => 'Please use letters, numbers, and hyphens only (e.g. acme).',
+                ],
+                'usage' => [
+                    'workspace_prompt' => 'Which workspace should I check usage for?',
+                ],
+                'subscription' => [
+                    'workspace_prompt' => 'Which workspace should I check subscription for?',
+                ],
+                'invite_member' => [
+                    'email_prompt' => 'What email should we send the invitation to?',
+                    'workspace_prompt' => 'Which workspace subdomain? (e.g. demo)',
+                    'role_prompt' => 'What role should they have?',
+                    'confirm_prompt' => 'Invite :email to :workspace as :role?',
+                    'invalid_email' => 'Please enter a valid email address.',
+                ],
+            ],
+            'roles' => [
+                'member' => 'Member',
+                'admin' => 'Admin',
+            ],
+            'workspace_suggestions' => ['demo', 'moh'],
+        ],
+    ],
+
+];

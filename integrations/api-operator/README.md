@@ -1,0 +1,55 @@
+# api-operator integration
+
+Connect [api-operator](https://github.com/mohammedelkarsh/api-operator) to this app via **YAML adapter** — no Python in this repo.
+
+- **PyPI:** [pypi.org/project/api-operator](https://pypi.org/project/api-operator/)
+- **Full guide:** [docs/api-operator.md](../../docs/api-operator.md)
+
+## In-app guided agent
+
+When `API_OPERATOR_ENABLED=true` and the operator is running, logged-in users on the **central** domain see a chat button (dashboard, Filament, landing). Tokens stay server-side via Laravel proxy routes.
+
+## Prerequisites
+
+1. Tenant Kit running (match `APP_URL` in `.env`)
+2. `php artisan migrate --seed`
+3. `pip install api-operator==0.10.0`
+
+## Quick start
+
+```bash
+# Issue a central token (see docs/api-operator.md)
+export TENANT_KIT_API_TOKEN="your-sanctum-token"
+
+api-operator chat \
+  --adapter yaml \
+  --config integrations/api-operator/adapter.yaml \
+  --base-url http://laravel-tenant-kit.test
+```
+
+Docker on port 8080:
+
+```bash
+api-operator chat \
+  --adapter yaml \
+  --config integrations/api-operator/adapter.yaml \
+  --base-url http://laravel-tenant-kit.test:8080 \
+  --token "YOUR_TOKEN"
+```
+
+## Integration test
+
+From an [api-operator](https://github.com/mohammedelkarsh/api-operator) clone:
+
+```bash
+python scripts/integration_tenant_kit.py --base-url http://laravel-tenant-kit.test:8080
+```
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| `adapter.yaml` | HTTP tools for Sanctum API |
+| `README.md` | This guide |
+
+Keep in sync with `api-operator/examples/tenant-kit-adapter/` when upgrading either repo.
